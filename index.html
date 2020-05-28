@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title></title>
+	<style type="text/css">
+		.treas {
+			background: #3d3d3d;
+			height: 140px;
+		}
+		.trap{
+			background: #3d3d3d;
+			height: 140px; 
+		}
+		.enemy{
+			background: #3d3d3d;
+			height: 140px;
+		}
+		.start {
+			background: #3d3d3d;
+			height: 140px;
+		}
+		.zero {
+			background: #3d3d3d;
+			height: 140px;
+		}
+	</style>
+</head>
+<body class="cont" style="background-image: url(bg.jpg); background-size: 100% 100%;">
+	<div class="col-12 bg-cyan" style="height: 250px;">
+		<h1 style="color: white">Игра 'Найди сокровище'</h1>
+		<h1 style="color: white">Собери 800 очков</h1>
+		<h1 style="color: white">Ваши очки: <span class="score"></span></h1>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 start border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 start border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 start border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<div class="col-10 bg-warning  mx-auto row pl-0 pr-0" style="height: 140px;">
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 zero border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 enemy border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 trap border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 start border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+		<div class="col-1 treas border border-dark" style="background-image: url(treas.png); background-size: 100% 100%">
+		</div>
+	</div>
+	<script type="text/javascript">
+	let score = document.querySelector('.score');
+	let scoreNum = 0;
+	score.innerHTML= scoreNum;
+	let treas = document.querySelectorAll('.treas');
+	let trap = document.querySelectorAll('.trap');
+	let start = document.querySelectorAll('.start');
+	let enemy = document.querySelectorAll('.enemy');
+	let zero = document.querySelectorAll('.zero');
+	let cont = document.querySelector('cont');
+	for(let i = 0; i < 59; i = i + 1){
+		treas[i].onclick = function(){
+			treas[i].style.background = 'green';
+			treas[i].style.backgroundImage = 'url(coin.png)';
+			treas[i].style.backgroundSize = '100% 100%';
+			scoreNum = scoreNum + 75;
+			score.innerHTML= scoreNum;
+			if(scoreNum >= 800){
+				alert('Ты выйграл!');
+				cont.style.display = 'none';
+			}
+		}
+	}
+
+	for(let i = 0; i < 45; i = i + 1){
+		trap[i].onclick = function(){
+			trap[i].style.background = 'red';
+			trap[i].style.backgroundImage = 'url(trap.png)';
+			trap[i].style.backgroundSize = '100% 100%';
+			scoreNum = scoreNum - 50;
+			score.innerHTML= scoreNum;
+		}
+
+	}
+
+	for(let i = 0; i < 26; i++){
+		enemy[i].onclick = function(){
+			enemy[i].style.background = 'orange';
+			enemy[i].style.backgroundImage = 'url(enemy.png)';
+			enemy[i].style.backgroundSize = '100% 100%';
+			scoreNum = scoreNum - 100;
+			score.innerHTML= scoreNum;
+		}
+	}
+	for(let i = 0; i < 10; i++){
+		zero[i].onclick = function(){
+			zero[i].style.background = 'blue';
+			zero[i].style.backgroundImage = 'url(zero.png)';
+			zero[i].style.backgroundSize = '100% 100%';
+			scoreNum = 0;
+			score.innerHTML= scoreNum;
+			alert('Обнуление очков!');
+		}
+	}
+	for(let i = 0; i < 4; i++){
+		start[i].onclick = function(){
+			start[i].style.background = 'gray';
+			start[i].style.backgroundImage = 'url(start.png)';
+			start[i].style.backgroundSize = '100% 100%';
+			scoreNum = 0;
+			score.innerHTML= scoreNum;
+			alert('Начинай все сначала');
+			window.location.reload();
+		}
+	}
+	</script>
+</body>
+</html>
